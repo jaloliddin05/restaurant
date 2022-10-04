@@ -1,0 +1,49 @@
+.container_home {
+  display: flex;
+  justify-content: center;
+  width: 90vw;
+}
+
+.panel_home {
+  box-shadow: 0 5px 1rem rgba(0, 0, 0, 0.1);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.5s ease-in;
+}
+
+.panel_home h3 {
+  font-size: calc(24 / 16 * 1rem);
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel_home.active {
+  flex: 5;
+}
+
+.panel_home.active h3 {
+  opacity: 1;
+  transition: all 0.5s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+  .container_home {
+    width: 100vw;
+  }
+
+  .panel_home:nth-of-type(4),
+  .panel_home:nth-of-type(5) {
+    display: none;
+  }
+}
